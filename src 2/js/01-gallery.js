@@ -46,6 +46,7 @@ function clickOnPhoto(event) {
         function onEscPress(event) {
           const ESC_KEY_CODE = "Escape";
           if (event.code === ESC_KEY_CODE) {
+            window.removeEventListener("keydown", onEscPress);
             instance.close();
           }
         }
